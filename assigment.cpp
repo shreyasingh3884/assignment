@@ -13,13 +13,13 @@ class vehicle:public Saurabh
 {
 
   std::string name;
-  const char *type;
-  const char *fuel;
-  const char *used_or_new;
+   std::string type;
+   std::string fuel;
+   std::string used_or_new;
     std::string manufactur_details;
 public:
-  void setvehicledetails (std::string a, const char *b, const char *c,
-			  const char *d, std::string e)
+  void setvehicledetails (std::string a, std::string b, std::string c,
+			   std::string d, std::string e)
   {
     name = a;
     type = b;
@@ -30,8 +30,8 @@ public:
   }
   void display_vehicle_details ()
   {
-    cout << "Vehicle name is \t" << name << "   and it is a\t" << type << endl
-      << name << " runs on\t" << fuel << endl << name << " is\t" <<
+    cout << "Vehicle name is " << name << "   and it is a " << type << endl
+      << name << " runs on " << fuel << endl << name << " is " <<
       used_or_new << " and " << manufactur_details << endl;
   }
 
@@ -45,7 +45,7 @@ main ()
   a.noofvehicle ();
   vehicle car;
   vehicle bike;
-  car.setvehicledetails ("honda accord", "car", "diesel", "new",
+  car.setvehicledetails ("honda accord", "car"," diesel", "new",
 			 "made in India");
   bike.setvehicledetails ("Ducati", "bike", "petrol", "used",
 			  "imported vehicle");
